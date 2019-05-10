@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&subset=vietnamese');
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    width: 100%;
+    line-height: 100vh;
+    align-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.background_game{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.background_game span{
+    width: 25%;
+    height: 250px;
+    background: url(../../img/bg_game_knight.jpg) fixed;
+    background-size: cover;
+}
+
+.formLogin {
+    padding: 20px;
+    border:1px solid #c27416;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.43);
+    box-shadow: -0px  0px 15px #787878;
+    line-height: 0;
+}
+
+.slv-btn-dark{
+    border: none;
+    color: #f0eceb;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 10px 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+    overflow: hidden;
+    position: relative;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .5s;
+    line-height: 25px;
+}
+.slv-btn-dark:hover{
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: -0px  0px 15px #787878;
+}
+
+.slv-btn-dark:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: rgba(255,255,255,.05);
+}
+
+.slv-btn-dark span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #0c002b, #BDD2D7, #0c002b);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.slv-btn-dark span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0c002b, #BDD2D7, #0c002b);
+    animation: animate2 2s linear infinite;
+}
+
+@keyframes animate2 {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.slv-btn-dark span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to left, #0c002b, #BDD2D7, #0c002b);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+.slv-btn-dark span:nth-child(4){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to top, #0c002b, #BDD2D7, #0c002b);
+    animation: animate4 2s linear infinite;
+}
+
+@keyframes animate4 {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.flex-slv{
+    display: flex;
+    height: 35px;
+    line-height: 35px;
+}
+
+.flex-slv label{
+    flex: 1
+}
+.flex-slv .slv-input{
+    transition: .5s;
+    flex: 1.5;
+    padding-left: 5px;
+    background: rgba(0, 0, 0, 0.54);
+    border: 1px solid #646464;
+    outline:none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.flex-slv .slv-input:focus, .flex-slv .slv-input:hover{
+    box-shadow: 0 0 15px #787878;
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Knight</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myCss/index.css">
+    <style>
+        #box_game{
+            width: 1024px;
+            height: 600px;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            transition: 1s;
+        }
+        #box_game.active{
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 p-0" >
+                <section class="background_game">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="row d-none" id="box_game" >
+                        <div class="col-md-12 p-0">
+                            <canvas id="scene_game"></canvas>
+                        </div>
+                    </div>
+                </section>
+                <div class="row mt-5" id="FORM_LOGIN">
+                    <div class="col-md-4 offset-md-4 mt-4 col-sm-6 offset-sm-3">
+                        <div class="formLogin">
+                            <div class="form-group flex-slv">
+                                <label class="text-white">Tài khoản</label>
+                                <input type="text" class="slv-input" name="account" required>
+                            </div>
+                            <div class="form-group flex-slv">
+                                <label class="text-white">Mật khẩu</label>
+                                <input type="password" class="slv-input" name="password" required>
+                            </div>
+                            <div class="form-group text-center mt-4">
+                                <button class="slv-btn-dark" id="btnLogin">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Đăng nhập
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script>
+    TweenMax.staggerFrom('section span', 0.1, {
+        y: 0,
+        x: 0,
+        opacity: 1
+    }, 0.1);
+</script>
+<script src="js/socketio.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/myJs/index.js"></script>
+</html>
